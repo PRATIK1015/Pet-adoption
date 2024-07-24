@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "684bee0f-b54c-4d56-9fc8-6cb5f818afd8",
+		"name": "PetAdoptionSystemApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32075675"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\": \"pp757439@gmail.com\",\r\n    \"password\": \"securePassword123\",\r\n    \"role\": \"USER\",\r\n    \"name\": \"Pratik Patel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"superadmin@benzatine.com\",\r\n    \"password\":\"superadmin@2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USer",
+			"item": [
+				{
+					"name": "update-user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYzMmFlZjk5LTZmMzYtNDhlNC1hNjAzLTMyYjY1NzBkMzA1ZiIsImVtYWlsIjoic3VwZXJhZG1pbkBiZW56YXRpbmUuY29tIiwiaWF0IjoxNzIxODQwMTg4LCJleHAiOjE3MjE5MjY1ODh9.DEumBr7Rbp-zWwMcxKD8CbtZHG4ga4mGnHm2Oxhf_KY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pratik\",\r\n    \"role\":\"ADMIN\",\r\n    \"updateUserId\":\"4e58051a-bdd9-44a6-a382-866e5d10e807\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/update-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"update-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-user Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYzMmFlZjk5LTZmMzYtNDhlNC1hNjAzLTMyYjY1NzBkMzA1ZiIsImVtYWlsIjoic3VwZXJhZG1pbkBiZW56YXRpbmUuY29tIiwiaWF0IjoxNzIxODQwMTg4LCJleHAiOjE3MjE5MjY1ODh9.DEumBr7Rbp-zWwMcxKD8CbtZHG4ga4mGnHm2Oxhf_KY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pratik\",\r\n    \"role\":\"USER\",\r\n    \"updateUserId\":\"369e9f9c-0b47-4ad4-a973-ce5b7cb4c600\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pet",
+			"item": [
+				{
+					"name": "create-pet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYzMmFlZjk5LTZmMzYtNDhlNC1hNjAzLTMyYjY1NzBkMzA1ZiIsImVtYWlsIjoic3VwZXJhZG1pbkBiZW56YXRpbmUuY29tIiwiaWF0IjoxNzIxODQ5MDY3LCJleHAiOjE3MjE5MzU0Njd9.aecrj2KqoU4WG79dYO7DJ8_X7A8if_8rhvqA8yfNCCE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Luna001\",\r\n        \"age\": 6,\r\n        \"description\": \"A calm and serene turtle who enjoys basking in the sun.\",\r\n        \"species\": \"Turtle\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/pet/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pet",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "petAdoption",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYzMmFlZjk5LTZmMzYtNDhlNC1hNjAzLTMyYjY1NzBkMzA1ZiIsImVtYWlsIjoic3VwZXJhZG1pbkBiZW56YXRpbmUuY29tIiwiaWF0IjoxNzIxODQ5MDY3LCJleHAiOjE3MjE5MzU0Njd9.aecrj2KqoU4WG79dYO7DJ8_X7A8if_8rhvqA8yfNCCE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"petId\":\"1e22c853-73e0-4874-8b92-2a4a979aad2b\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/pet/adoption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pet",
+								"adoption"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAdoptionReq",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYzMmFlZjk5LTZmMzYtNDhlNC1hNjAzLTMyYjY1NzBkMzA1ZiIsImVtYWlsIjoic3VwZXJhZG1pbkBiZW56YXRpbmUuY29tIiwiaWF0IjoxNzIxODQ5MDY3LCJleHAiOjE3MjE5MzU0Njd9.aecrj2KqoU4WG79dYO7DJ8_X7A8if_8rhvqA8yfNCCE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/pet/adoption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pet",
+								"adoption"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "handleAdoptionReq",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM2OWU5ZjljLTBiNDctNGFkNC1hOTczLWNlNWI3Y2I0YzYwMCIsImVtYWlsIjoiZXhhbXBsZUBleGFtcGxlLmNvbSIsImlhdCI6MTcyMTg0MzE1OSwiZXhwIjoxNzIxOTI5NTU5fQ.ldxp22nP6-X1ZORoL4X8KPK5eHpuulvB2qBwU9TpGsQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"reqId\":\"e678bc1c-7264-44e4-bf60-2e8e440de155\",\r\n   \"status\":\"REJECTED\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/pet/handle-adoption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pet",
+								"handle-adoption"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallpets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYzMmFlZjk5LTZmMzYtNDhlNC1hNjAzLTMyYjY1NzBkMzA1ZiIsImVtYWlsIjoic3VwZXJhZG1pbkBiZW56YXRpbmUuY29tIiwiaWF0IjoxNzIxODQ5MDY3LCJleHAiOjE3MjE5MzU0Njd9.aecrj2KqoU4WG79dYO7DJ8_X7A8if_8rhvqA8yfNCCE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/pet/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pet",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Fluffy",
+									"disabled": true
+								},
+								{
+									"key": "species",
+									"value": "Turtle",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
