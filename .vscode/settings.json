@@ -1,0 +1,19 @@
+{
+	"editor.tabSize": 2,
+	"prettier.singleQuote": true,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"prettier.tabWidth": 2,
+	"prettier.useTabs": true,
+	"cSpell.words": [
+		"Athol",
+		"Chimwemwe",
+		"CHINGOLA",
+		"Chrometec",
+		"Copperbelt",
+		"Damru",
+		"Northwood",
+		"tpin",
+		"VIBHAV"
+	]
+}
